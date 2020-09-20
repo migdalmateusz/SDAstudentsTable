@@ -1,1 +1,88 @@
 /* You can add global styles to this file, and also import other style files */
+/* Ustalenie właściwości "box-sizing" dla wszystkich elementów */
+* {
+    box-sizing: border-box;
+  }
+  
+  /* Właściwości dla body */
+  body {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+  }
+  
+  /* Klasa kontenera, która ma ograniczoną szerokość i wyśrodkowuje content */
+  /* Ustawienie lewego i prawego marginesu na "auto" wyśrodkowuje kontener */
+  .container {
+    margin: 20px auto;
+    width: 100%;
+  }
+  
+  /* Tabele */
+  table {
+    width: 100%;
+  }
+  table th,
+  table td {
+    padding: 8px;
+    text-align: left;
+  }
+  /* Cieniujemy co drugi (parzysty) wiersz tabeli */
+  /* Używamy tbody, aby upewnić się, że nie cieniujemy nagłówka - to zachowuje kolejność cieniowania */
+  table tbody > tr:nth-child(odd) {
+    background: #dddddd;
+  }
+  
+  /* Przyciski */
+  .button {
+    display: inline-block;
+    margin: 2px 0;
+    padding: 12px 30px 14px;
+    border: 0;
+    background: #999999;
+    border-radius: 6px;
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  /* Przycisk po najechaniu kursorem */
+  .button:hover {
+    background: #888888;
+  }
+  /* Przycisk w stanie aktywnym */
+  .button:active,
+  .button:focus {
+    background: #777777;
+  }
+  
+  /* Przycisk w kolorze zielonym */
+  .button-green {
+    background: #33cc55;
+  }
+  .button-green:hover {
+    background: #22bb44;
+  }
+  .button-green:active,
+  .button-green:focus {
+    background: #22aa44;
+  }
+  
+  /* Przycisk w kolorze czerwonym */
+  .button-red {
+    background: #dd3333;
+  }
+  .button-red:hover {
+    background: #cc2222;
+  }
+  .button-red:active,
+  .button-red:focus {
+    background: #bb2222;
+  }
+  
+  /* Media Query dla urządzeń o minimalnej szerokości 992px */
+  /* czyli dla komputerów stacjonarnych */
+  @media (min-width: 992px) {
+    .container {
+      max-width: 960px;
+    }
+  }
